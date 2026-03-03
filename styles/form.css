@@ -1,0 +1,48 @@
+form {
+  width: 100%;
+  display: grid;
+  margin-inline: 0;
+
+  & input,
+  & button {
+    height: 2.75rem;
+    width: 100%;
+    border-radius: 0.75rem;
+    margin-block: 1rem;
+    font-size: 1rem;
+  }
+
+  & input {
+    border: 2px solid var(--border-primary);
+    padding: 1.2rem 0.7rem;
+    line-height: 140%;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      border: 2px solid var(--border-hover);
+    }
+  }
+
+  & button {
+    border: none;
+    background-color: var(--color-brand);
+    font-weight: 500;
+    color: var(--content-always-white);
+    overflow: hidden;
+
+    cursor: pointer;
+
+    text-align: center;
+
+    &:hover {
+      background-color: var(--color-brand-hover);
+    }
+  }
+
+  @media (width >= 40rem) {
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+}
