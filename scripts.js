@@ -3,9 +3,9 @@ const shoppingList = document.querySelector(".shopping-list");
 
 function createListItem(itemName) {
   shoppingList.innerHTML += `<li class="item-list">
-            <label>
-              <input type="checkbox" name="item" />
-              <span>${itemName}</span>
+  <label>
+  <input type="checkbox" name="item" />
+  <span>${itemName}</span>
             </label>
             <!-- Trash -->
             <button type="button" aria-label="Remove item" class="trash">
@@ -47,7 +47,15 @@ function createListItem(itemName) {
 
 form.onsubmit = (e) => {
   e.preventDefault();
+  //Busca o valor do item para adiciona-loa lista
   const itemName = form.newItem.value;
-
+  // Adiciona um item a lista
   createListItem(itemName);
 };
+
+shoppingList.addEventListener("click", (e) => {
+  const li = e.target.closest("li");
+  if (e.target.closest(".trash")) {
+    li.remove();
+  }
+});
