@@ -51,10 +51,13 @@ form.onsubmit = (e) => {
   const itemName = form.newItem.value;
   // Adiciona um item a lista
   createListItem(itemName);
+  //reseta o formulário como padrão
+  form.reset();
 };
 
 shoppingList.addEventListener("click", (e) => {
   const li = e.target.closest("li");
+  //checa se o clique está sendo na lixeira
   if (e.target.closest(".trash")) {
     li.remove();
   }
