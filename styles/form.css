@@ -44,5 +44,9 @@ form {
     grid-template-columns: 2fr 1fr;
     gap: 1rem;
     padding-bottom: 1rem;
+
+    & button {
+      border: none;
+    }
   }
 }
