@@ -73,7 +73,7 @@ O projeto foi desenvolvido com abordagem **Mobile First**, garantindo:
 
 ## 🔗 Links Úteis
 
-- [Ver o repositório](https://github.com/SEU_USUARIO/Lista-de-compras) - Clone do projeto
+- [Ver o repositório](https://github.com/SEU_USUARIO/lista-de-compras) - Clone do projeto
 - [Rocketseat](https://www.rocketseat.com.br/) - Instituição educacional
 
 ## 📝 Nota
