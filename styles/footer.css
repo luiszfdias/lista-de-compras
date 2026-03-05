@@ -1,12 +1,14 @@
 footer {
-  display: none;
+  display: grid;
   width: 100%;
-  max-width: 23rem;
+
   margin-block: 1rem;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
   & div {
     display: flex;
-    justify-content: center;
-    padding: 0.75rem;
+    justify-content: space-between;
+    padding: 0.75rem 2rem;
 
     border-radius: 0.75rem;
     color: var(--content-always-white);
@@ -16,5 +18,14 @@ footer {
       margin-inline: 0.5rem;
       font-weight: 500;
     }
+
+    & .close-alert {
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+    }
   }
+}
+.alert-remove {
+  opacity: 1;
 }

@@ -1,5 +1,6 @@
 const form = document.querySelector("form");
 const shoppingList = document.querySelector(".shopping-list");
+const footer = document.querySelector("footer");
 
 function createListItem(itemName) {
   shoppingList.innerHTML += `<li class="item-list">
@@ -60,5 +61,17 @@ shoppingList.addEventListener("click", (e) => {
   //checa se o clique está sendo na lixeira
   if (e.target.closest(".trash")) {
     li.remove();
+
+    footer.classList.add("alert-remove");
+
+    setTimeout(() => {
+      footer.classList.remove("alert-remove");
+    }, 3000);
+  }
+});
+
+footer.addEventListener("click", (e) => {
+  if (e.target.closest(".close-alert")) {
+    footer.classList.remove("alert-remove");
   }
 });
